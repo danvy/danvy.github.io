@@ -1,0 +1,58 @@
+baseURL: https://danvy.tv/
+languageCode: en-us
+title: Danvy.TV
+theme: PaperMod
+# Copyright: © 2025 Alex Danvy
+params:
+  homeInfoParams:
+    title: Welcome to my digital space
+    content: Head in the clouds, feet on the ground
+  contact:
+      email: alex@danvy.tv
+  subtitle: Head in the clouds, feet on the ground
+  defaultTheme: dark
+  hideFooter: true
+  footer:
+    text: Alex Danvy
+  # showReadingTime: true
+  # showShareButtons: true
+  socialIcons:
+    - name: linkedin
+      url: "https://linkedin.com/in/danvy"
+    - name: x
+      url: "https://x.com/danvy"
+    - name: facebook
+      url: "https://facebook.com/danvy"
+    - name: github
+      url: "https://github.com/danvy"
+  # analytics:
+  #   google:
+  #     SiteVerificationTag: ""
+googleAnalytics: G-S3KX1Z9H9S
+ignoreLogs: ['warning-goldmark-raw-html']
+services:
+  googleAnalytics:
+    id: G-S3KX1Z9H9S
+# sectionPagesMenu: main
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 10
+    - name: Posts
+      url: /posts
+      weight: 20
+    - name: About
+      url: /about
+      weight: 20
+    - name: Links
+      url: /links
+      weight: 20
+    - name: Search
+      url: /search
+      weight: 20
