@@ -2,11 +2,13 @@ baseURL: https://danvy.tv/
 languageCode: en-us
 title: Danvy.TV
 theme: PaperMod
+author: Alex Danvy
 # Copyright: © 2025 Alex Danvy
 params:
   homeInfoParams:
     title: Welcome to my digital space
     content: Head in the clouds, feet on the ground
+  author: Alex Danvy
   contact:
       email: alex@danvy.tv
   subtitle: Head in the clouds, feet on the ground

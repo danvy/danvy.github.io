@@ -1,5 +1,6 @@
 ---
 title: Links
+description: Links to Alex Danvy online presence
 menus: main
 weight: 20
 ---

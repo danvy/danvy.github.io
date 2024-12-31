@@ -1,5 +1,6 @@
 ---
 title: About
+description: About Alex Danvy
 menus: main
 weight: 30
 ---
