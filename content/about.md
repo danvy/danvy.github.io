@@ -1,8 +1,6 @@
 ---
 title: About
-description: About Alex Danvy
-menus: main
-weight: 30
+description: A brief introduction about myself
 ---
 
 ![image](alex-danvy-terminator.png)

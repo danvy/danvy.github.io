@@ -1,13 +1,11 @@
 ---
 title: Links
-description: Links to Alex Danvy online presence
-menus: main
-weight: 20
+description: Links to most of my online presence
 ---
 
 These are the virtual places where you might find me or at least get more information about me.
 
-Try [Altoviz](https://altoviz.com) the smart, easy and affordable invoicing & accounting app for small businesses and freelancers that I just launched
+Try [Altoviz](https://altoviz.com), the smart, easy and affordable invoicing & accounting app for small businesses and freelancers that I just launched
 
 Join my friends list on [Facebook](https://facebook.com/danvy)
 

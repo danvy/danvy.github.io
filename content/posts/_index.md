@@ -1,6 +1,4 @@
 ---
 title: Posts
-description: Alex Danvy blog posts
-menus: main
-weight: 15
+description: Blogging about tech, entrepreneurship and life
 ---
