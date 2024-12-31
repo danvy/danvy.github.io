@@ -6,9 +6,9 @@ author: Alex Danvy
 # Copyright: © 2025 Alex Danvy
 enableEmoji: true
 params:
-  homeInfoParams:
-    title: Welcome to my digital space
-    content: Head in the clouds, feet on the ground
+  # homeInfoParams:
+  #   title: Welcome to my digital space
+  #   content: Head in the clouds, feet on the ground
   author: Alex Danvy
   contact:
       email: alex@danvy.tv
@@ -16,6 +16,7 @@ params:
   defaultTheme: dark
   hideFooter: true
   hideAuthor: true
+  AlignSocialIconsTo: center
   label:
     text: Danvy.TV
     icon: /favicon.svg
