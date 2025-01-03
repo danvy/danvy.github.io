@@ -25,7 +25,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         env:
-          HUGO_CACHEDIR: ${{ runner.temp }}/cache/hugo
+          HUGO_CACHEDIR: ${{ runner.temp }}/cache-hugo
           HUGO_ENVIRONMENT: production
           TZ: Europe/Paris
         with:
@@ -35,7 +35,7 @@ jobs:
         uses: actions/cache@v4
         with:
           # path: ${{ env.HUGO_CACHEDIR }}
-          path: ${{ runner.temp }}/cache/hugo
+          path: ${{ runner.temp }}/cache-hugo
           key: ${{ runner.os }}-hugo-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-hugo-
@@ -59,7 +59,7 @@ jobs:
       pages: write
       id-token: write
     env:
-      HUGO_CACHEDIR: /tmp/cache/hugo # <- Define the env variable here, so that Hugo's cache dir is now predictible in your workflow and doesn't depend on the Hugo's version you're using.
+      HUGO_CACHEDIR: /tmp/cache-hugo # <- Define the env variable here, so that Hugo's cache dir is now predictible in your workflow and doesn't depend on the Hugo's version you're using.
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
