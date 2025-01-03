@@ -1,41 +1,60 @@
 baseURL: https://danvy.tv/
 languageCode: en-us
 title: Danvy.TV
-theme: PaperMod
+theme: blowfish
 author: Alex Danvy
 # Copyright: © 2025 Alex Danvy
 enableEmoji: true
 params:
+  logo: /logo-dark.svg
+  secondaryLogo: /logo-light.svg
+  description: Alex Danvy, CEO of Altoviz, personal website
+  copyright: © { year } Alex Danvy
+  colorScheme: noir
+  # blowfish, avocado, fire, ocean, forest, princess, neon, bloody, terminal, marvel, noir, autumn, congo, andslate
+  defaultAppearance: dark
+  autoSwitchAppearance: false
+  enableSearch: true
+  highlightCurrentMenuArea: true
   # homeInfoParams:
   #   title: Welcome to my digital space
   #   content: Head in the clouds, feet on the ground
-  author: Alex Danvy
+  # author: Alex Danvy
+  author:
+    name: Alex Danvy 
+    image: alex-danvy-terminator.png
+    headline: A daft robot
+    bio: Between nerd and geek, entrepreneur at [Altoviz](https://altoviz.com)
+    links:
+      - linkedin: "https://linkedin.com/in/danvy"
+      - x-twitter: "https://x.com/danvy"
+      - facebook: "https://facebook.com/danvy"
+      - github: "https://github.com/danvy"
+      - instagram: "https://instagram.com/adanvy"
+  homepage:
+    layout: profile
+    showRecent: true
+    # cardView: true
+  article:
+    showAuthorBottom: true
+    showReadingTime: false
+    showWordCount: false
+    showAuthor: false
+  header:
+    layout: fixed-fill-blur
+  footer:
+    showThemeAttribution: false
+    showAppearanceSwitcher: true
+    showScrollToTop: true
   contact:
       email: alex@danvy.tv
   subtitle: Head in the clouds, feet on the ground
-  defaultTheme: dark
-  hideFooter: true
-  hideAuthor: true
-  AlignSocialIconsTo: center
-  label:
-    text: Danvy.TV
-    icon: /favicon.svg
+  # label:
+  #   text: Danvy.TV
+  #   icon: /favicon.svg
   assets:
     theme_color: "#37383e"
     msapplication_TileColor: "#000000"
-  footer:
-    text: Alex Danvy
-  # showReadingTime: true
-  # showShareButtons: true
-  socialIcons:
-    - name: linkedin
-      url: "https://linkedin.com/in/danvy"
-    - name: x
-      url: "https://x.com/danvy"
-    - name: facebook
-      url: "https://facebook.com/danvy"
-    - name: github
-      url: "https://github.com/danvy"
   # analytics:
   #   google:
   #     SiteVerificationTag: ""
@@ -64,9 +83,30 @@ menu:
     - name: Links
       url: /links
       weight: 40
-    - name: " "
-      identifier: search
-      url: /search
-      # pre: icons/search.svg
-      pre: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>'
-      weight: 50
+  footer:
+    - identifier: LinkedIn
+      pre: linkedin
+      url: https://linkedin.com/in/danvy
+      weight: 110
+    - identifier: X
+      pre: x-twitter
+      url: https://x.com/danvy
+      weight: 120
+    - identifier: Facebook
+      pre: facebook
+      url: https://facebook.com/danvy
+      weight: 130
+    - identifier: Instagram
+      pre: instagram
+      url: https://instagram.com/adanvy
+      weight: 140
+    - identifier: GitHub
+      pre: github
+      url: https://github.com/danvy
+      weight: 150
+    # - name: " "
+    #   identifier: search
+    #   url: /search
+    #   # pre: icons/search.svg
+    #   pre: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>'
+    #   weight: 50

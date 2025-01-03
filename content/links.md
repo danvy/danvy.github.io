@@ -1,6 +1,7 @@
 ---
 title: Links
 description: Links to most of my online presence
+showDate: false
 ---
 
 These are the virtual places where you might find me or at least get more information about me.
