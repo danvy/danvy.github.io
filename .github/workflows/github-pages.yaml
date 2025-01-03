@@ -13,10 +13,6 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: false
-    env:
-      HUGO_CACHEDIR: ${{ runner.temp }}/cache/hugo
-      HUGO_ENVIRONMENT: production
-      TZ: Europe/Paris
     steps:
       - name: Setup Pages
         id: pages
@@ -28,12 +24,16 @@ jobs:
           fetch-depth: 0
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/cache/hugo
+          HUGO_ENVIRONMENT: production
+          TZ: Europe/Paris
         with:
           hugo-version: "latest"
           extended: true
       - uses: actions/cache@v4
         with:
-          path: ${{ env.HUGO_CACHEDIR }} # <- Use the same env variable just right here
+          path: ${{ env.HUGO_CACHEDIR }}
           key: ${{ runner.os }}-hugo-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-hugo-
