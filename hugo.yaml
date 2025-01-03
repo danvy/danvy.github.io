@@ -22,7 +22,7 @@ params:
   # author: Alex Danvy
   author:
     name: Alex Danvy 
-    image: alex-danvy-terminator.png
+    image: images/alex-danvy-terminator.webp
     headline: A daft robot
     bio: Between nerd and geek, entrepreneur at [Altoviz](https://altoviz.com)
     links:
