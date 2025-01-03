@@ -31,7 +31,8 @@ jobs:
         with:
           hugo-version: "latest"
           extended: true
-      - uses: actions/cache@v4
+      - name: Caching
+        uses: actions/cache@v4
         with:
           # path: ${{ env.HUGO_CACHEDIR }}
           path: ${{ runner.temp }}/cache/hugo
