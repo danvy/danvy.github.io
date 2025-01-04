@@ -1,0 +1,15 @@
+.social-icons a svg {
+  height: 18px;
+  width: 18px;
+}
+/* .first-entry {
+  min-height: initial;
+} */
+.profile img {
+  border-radius: initial;
+}
+.post-entry {
+  background-color: initial;
+  padding: initial;
+  border: initial;
+}

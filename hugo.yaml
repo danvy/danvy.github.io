@@ -1,7 +1,7 @@
 baseURL: https://danvy.tv/
 languageCode: en-us
 title: Danvy.TV
-theme: blowfish
+theme: papermod
 author: Alex Danvy
 # Copyright: © 2025 Alex Danvy
 enableEmoji: true
@@ -10,27 +10,65 @@ params:
   # secondaryLogo: /logo-light.svg
   description: Alex Danvy, CEO of Altoviz, personal website
   copyright: © { year } Alex Danvy
+  DateFormat: "2006-01-02"
   colorScheme: noir
   # blowfish, avocado, fire, ocean, forest, princess, neon, bloody, terminal, marvel, noir, autumn, congo, andslate
+  defaultTheme: dark
   defaultAppearance: dark
   autoSwitchAppearance: false
   enableSearch: true
   highlightCurrentMenuArea: true
+  hideFooter: true
+  # PaperMod
   # homeInfoParams:
-  #   title: Welcome to my digital space
-  #   content: Head in the clouds, feet on the ground
+  profileMode:
+    enabled: true
+    title: Alex Danvy
+    content: Head in the clouds, feet on the ground
+    author: Alex Danvy
+    subtitle: Head in the clouds, feet on the ground
+    # Welcome to my digital space
+    imageUrl: images/logo.svg
+    imageTitle: Logo
+    # imageWidth: 120 # custom size
+    # imageHeight: 120 # custom size
+    hideSocialIcons: true
+  socialIcons:
+    - name: LinkedIn
+      url: https://linkedin.com/in/danvy
+    - name: X
+      url: https://x.com/danvy
+    - name: Facebook
+      url: https://facebook.com/danvy
+    - name: Instagram
+      url: https://instagram.com/adanvy
+    - name: GitHub
+      url: https://github.com/danvy
+  navbar:
+    displayTitle: true
+    displayLogo: true
+    logo:
+      path: images/logo-light.svg
+      dark: images/logo-dark.svg
+      link: /
+      width: 40
+      height: 20
+  editURL:
+    enable: false
+    base: "https://github.com/danvy/danvy.github.io/edit/main"
+  # PaperMod
   # author: Alex Danvy
-  author:
-    name: Alex Danvy 
-    image: images/alex-danvy-terminator.webp
-    headline: A daft robot
-    bio: Between nerd and geek, entrepreneur at [Altoviz](https://altoviz.com)
-    links:
-      - linkedin: "https://linkedin.com/in/danvy"
-      - x-twitter: "https://x.com/danvy"
-      - facebook: "https://facebook.com/danvy"
-      - github: "https://github.com/danvy"
-      - instagram: "https://instagram.com/adanvy"
+  # author:
+  #   name: Alex Danvy 
+  #   image: images/alex-danvy-terminator.webp
+  #   headline: A daft robot
+  #   bio: Between nerd and geek, entrepreneur at [Altoviz](https://altoviz.com)
+  #   links:
+  #     - linkedin: "https://linkedin.com/in/danvy"
+  #     - x-twitter: "https://x.com/danvy"
+  #     - facebook: "https://facebook.com/danvy"
+  #     - github: "https://github.com/danvy"
+  #     - instagram: "https://instagram.com/adanvy"
   homepage:
     layout: profile
     showRecent: true
@@ -50,12 +88,16 @@ params:
     showThemeAttribution: false
     showAppearanceSwitcher: true
     showScrollToTop: true
+    # hideCopyright: true
+    # PaperMod customer Alex
+    AlignSocialIconsTo: center
+    hideSocialIconsOnHome: false
   contact:
       email: alex@danvy.tv
   subtitle: Head in the clouds, feet on the ground
-  # label:
-  #   text: Danvy.TV
-  #   icon: /favicon.svg
+  label:
+    text: Danvy.TV
+    icon: /images/logo.svg
   assets:
     theme_color: "#37383e"
     msapplication_TileColor: "#000000"
@@ -72,21 +114,31 @@ outputs:
   home:
     - HTML
     - RSS
-    - JSON # necessary for search
+    - JSON # necessary for search with PaperMod
 menu:
   main:
     - name: Home
-      url: /
+      pageRef: /
       weight: 10
     - name: Posts
-      url: /posts/
+      pageRef: /posts
       weight: 20
     - name: About
-      url: /about/
+      pageRef: /about
       weight: 30
     - name: Links
-      url: /links/
+      pageRef: /links
       weight: 40
+    - identifier: search
+      url: /search
+      # pre: icons/search.svg
+      pre: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>'
+      weight: 50
+    # Hextra search
+    # - name: Search
+    #   weight: 50
+    #   params:
+    #     type: search
   footer:
     - identifier: LinkedIn
       pre: linkedin
@@ -108,9 +160,3 @@ menu:
       pre: github
       url: https://github.com/danvy
       weight: 150
-    # - name: " "
-    #   identifier: search
-    #   url: /search
-    #   # pre: icons/search.svg
-    #   pre: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>'
-    #   weight: 50

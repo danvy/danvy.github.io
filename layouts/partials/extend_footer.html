@@ -1,4 +1,7 @@
-{{ partial "social_icons.html" (dict "align" site.Params.AlignSocialIconsTo) }}
+{{- if (and (not site.Params.footer.hideSocialIcons) (and (not .IsHome) (not site.Params.footer.hideSocialIconsOnHome)))
+}}
+{{ partial "social_icons.html" (dict "align" site.Params.footer.AlignSocialIconsTo) }}
+{{- end }}
 <footer class="footer">
   {{- if not site.Params.footer.hideCopyright }}
   {{- if site.Copyright }}
