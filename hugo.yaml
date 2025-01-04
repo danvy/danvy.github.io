@@ -40,6 +40,10 @@ params:
     showReadingTime: false
     showWordCount: false
     showAuthor: false
+  # profileMode:
+  #   enabled: false
+  #   imageHeight: 200
+  #   imageWidth: 200
   header:
     layout: fixed-fill-blur
   footer:
