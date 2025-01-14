@@ -19,7 +19,3 @@ Feel free to share your love and my articles.
 Thanks.
 
 Alex
-
-
-
-Tech stack : [Hugo](https://gohugo.io/) with [Blowfish](https://blowfish.page/) hosted on [GitHub](https://github.com)
