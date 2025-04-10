@@ -13,6 +13,10 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: false
+    env:
+      HUGO_CACHEDIR: ${{ runner.temp }}/cache-hugo
+      HUGO_ENVIRONMENT: production
+      TZ: Europe/Paris
     steps:
       - name: Setup Pages
         id: pages
@@ -22,24 +26,25 @@ jobs:
         with:
           submodules: true
           fetch-depth: 0
+      - name: Read .env
+        id: read-env
+        run: |
+          . ./.env
+          echo "HUGO_VERSION=${HUGO_VERSION}" >> "${GITHUB_OUTPUT}"
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        env:
-          HUGO_CACHEDIR: ${{ runner.temp }}/cache-hugo
-          HUGO_ENVIRONMENT: production
-          TZ: Europe/Paris
+        uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "latest"
+          hugo-version: ${{ steps.read-env.outputs.HUGO_VERSION }}
           extended: true
       - name: Caching
         uses: actions/cache@v4
         with:
-          # path: ${{ env.HUGO_CACHEDIR }}
-          path: ${{ runner.temp }}/cache-hugo
+          path: ${{ env.HUGO_CACHEDIR }}
           key: ${{ runner.os }}-hugo-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-hugo-
       - name: Build
+        # if: steps.cache-hugo.outputs.cache-hit != 'true'
         run: |
           hugo \
             --gc \
