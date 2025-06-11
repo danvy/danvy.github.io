@@ -9,6 +9,7 @@ params:
   logo: /logo.svg
   # secondaryLogo: /logo-light.svg
   description: Alex Danvy, CEO of Altoviz, personal website
+  env: production
   copyright: © { year } Alex Danvy
   DateFormat: "2006-01-02"
   colorScheme: noir
@@ -109,7 +110,7 @@ params:
   #   google:
   #     SiteVerificationTag: ""
   opengraph:
-    image: /images/ogimage.jpg
+    image: ogimage.png
 googleAnalytics: G-S3KX1Z9H9S
 ignoreLogs: ['warning-goldmark-raw-html']
 services:

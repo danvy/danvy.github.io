@@ -35,17 +35,17 @@
 <meta property="og:type" content="website">
 {{- end }}
 
-{{- if .Params.opengraph.image -}}
-{{- if (ne .Params.opengraph.relative true) }}
-<meta property="og:image" content="{{ .Params.opengraph.image | absURL }}">
+{{- if site.Params.opengraph.image -}}
+{{- if (ne site.Params.opengraph.relative true) }}
+<meta property="og:image" content="{{ site.Params.opengraph.image | absURL }}">
 {{- else}}
-<meta property="og:image" content="{{ (path.Join .RelPermalink .Params.opengraph.image ) | absURL }}">
+<meta property="og:image" content="{{ (path.Join .RelPermalink site.Params.opengraph.image ) | absURL }}">
 {{- end}}
-{{- else if .Params.cover.image -}}
-{{- if (ne .Params.cover.relative true) }}
-<meta property="og:image" content="{{ .Params.cover.image | absURL }}">
+{{- else if site.Params.cover.image -}}
+{{- if (ne site.Params.cover.relative true) }}
+<meta property="og:image" content="{{ site.Params.cover.image | absURL }}">
 {{- else}}
-<meta property="og:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}">
+<meta property="og:image" content="{{ (path.Join .RelPermalink site.Params.cover.image ) | absURL }}">
 {{- end}}
 {{- else }}
 {{- with partial "_funcs/get-page-images" . }}
@@ -55,13 +55,13 @@
 {{- end }}
 {{- end }}
 
-{{- with .Params.audio }}
+{{- with site.Params.audio }}
 {{- range . | first 6 }}
 <meta property="og:audio" content="{{ . | absURL }}">
 {{- end }}
 {{- end }}
 
-{{- with .Params.videos }}
+{{- with site.Params.videos }}
 {{- range . | first 6 }}
 <meta property="og:video" content="{{ . | absURL }}">
 {{- end }}
